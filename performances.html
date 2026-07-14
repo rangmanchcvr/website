@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performances — RANGMANCH</title>
+  <meta name="description"
+    content="Explore all performances by RANGMANCH, the official Drama Club of CVR College of Engineering. Street plays, stage plays, mimes and more.">
+  <meta name="theme-color" content="#0a0806">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=1119">
+</head>
+
+<body style="cursor: auto;">
+
+  <div class="carousel-page">
+
+    <!-- Header -->
+    <div class="carousel-page-header">
+      <a href="rangmanch.html#productions" class="carousel-back">
+        <i class="ri-arrow-left-line"></i>
+        <span>Back to Home</span>
+      </a>
+      <a href="rangmanch.html" class="brand">
+        <div class="brand-mark" style="overflow: hidden; padding: 0;">
+          <img src="logo.png" alt="Rangmanch Logo"
+            style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.25) translateY(-2px);">
+        </div>
+        <span class="brand-word">RANGMANCH</span>
+      </a>
+    </div>
+
+    <!-- Title -->
+    <h1 class="carousel-page-title">Our Performances</h1>
+
+    <!-- Carousel -->
+    <div class="carousel-region" role="region" aria-label="Performance showcase">
+
+      <!-- Accessible live announcer -->
+      <div class="carousel-live" aria-live="polite" aria-atomic="true"></div>
+
+      <!-- Prev arrow -->
+      <button class="carousel-arrow carousel-prev" aria-label="Previous performance">
+        <i class="ri-arrow-left-s-line"></i>
+      </button>
+
+      <!-- Viewport -->
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Cards rendered by JS -->
+        </div>
+      </div>
+
+      <!-- Next arrow -->
+      <button class="carousel-arrow carousel-next" aria-label="Next performance">
+        <i class="ri-arrow-right-s-line"></i>
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Performance selector"></div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="performances-data.js"></script>
+  <script src="performances-carousel.js"></script>
+
+</body>
+
+</html>

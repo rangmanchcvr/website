@@ -177,6 +177,30 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: { trigger: '.productions-grid', start: 'top 80%' }
       });
 
+      /* ---------------------------------------------------------
+         Productions grid: cap to 2 rows
+      --------------------------------------------------------- */
+      function capProductionsGrid() {
+        const grid = document.getElementById('productionsGrid');
+        const viewMoreBtn = document.getElementById('prodViewMore');
+        if (!grid) return;
+        const cards = Array.from(grid.querySelectorAll('.prod-card'));
+        const w = window.innerWidth;
+        let perRow = 4;
+        if (w <= 620) perRow = 1;
+        else if (w <= 980) perRow = 2;
+        const maxVisible = perRow * 2;
+        cards.forEach((card, i) => {
+          card.style.display = i < maxVisible ? '' : 'none';
+        });
+        if (viewMoreBtn) {
+          viewMoreBtn.closest('.prod-view-more-wrap').style.display =
+            cards.length > maxVisible ? 'flex' : 'none';
+        }
+      }
+      capProductionsGrid();
+      window.addEventListener('resize', capProductionsGrid);
+
       const lightbox = document.getElementById('lightbox');
       const lightboxInner = document.getElementById('lightboxInner');
       const lightboxClose = document.getElementById('lightboxClose');
@@ -324,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
          Social cards reveal
       --------------------------------------------------------- */
       gsap.from('.social-card', {
-        opacity: 0, y: 30, duration: .6, stagger: .08, ease: 'power2.out',
+        opacity: 0, duration: .6, ease: 'power2.out',
         scrollTrigger: { trigger: '.social-grid', start: 'top 85%' }
       });
 

@@ -19,7 +19,7 @@
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1118">
+  <link rel="stylesheet" href="styles.css?v=1121">
 </head>
 
 <body>
@@ -302,6 +302,20 @@
           </div>
         </article>
 
+        <article class="prod-card" data-modal="prod-18">
+          <div class="prod-card-media">
+            <img src="performances/CNC_STAGE.png"
+              alt="Nindhala bindha court aanda poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Stage Play</span>
+            <h3>Nindhala bindha court aanda</h3>
+            <p class="prod-meta">CVR Ciencia &middot; 2026</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
         <article class="prod-card" data-modal="prod-8">
           <div class="prod-card-media">
             <img src="performances/hlf1.jpeg"
@@ -487,10 +501,24 @@
 
 
       </div>
+
+      <div class="prod-view-more-wrap">
+        <a href="performances.html" class="btn btn-ghost prod-view-more" id="prodViewMore">
+          <span>View more</span>
+          <i class="ri-arrow-down-s-line"></i>
+        </a>
+      </div>
     </section>
 
     <!-- PRODUCTION MODALS (hidden data, rendered by JS into a shared lightbox) -->
     <div class="prod-data" hidden>
+
+      <div id="prod-18" data-title="Nindhala bindha court aanda" data-genre="Stage Play"
+        data-cast="Cast of CVR" data-director="Directed by CVR Rangmanch"
+        data-event="Ciencia" data-year="2026" data-awards=""
+        data-desc="A stage play performed at CVR Ciencia in 2026."
+        data-img1="performances/CNC_STAGE.png"
+        data-img2="performances/CNC_STAGE.png"></div>
 
 
 
@@ -550,7 +578,7 @@
           <h2 class="mentor-name">Dr. Jaya Verma</h2>
           <p class="mentor-role">Founder &amp; Mentor, Rangmanch &middot; Dept. of Humanities &amp; Sciences</p>
 
-          <p class="mentor-contribution">Under her mentorship since 2016, Rangmanch grew from a single annual performance to a year-round repertory participating and winning in multiple national competitions four every year.</p>
+          <p class="mentor-contribution">Under her mentorship since 2016, Rangmanch has evolved from presenting a single annual performance into a year-round theatre ensemble, consistently participating in and winning multiple national competitions each year.</p>
           <div class="mentor-years"><i class="ri-time-line"></i><span>10 years mentoring Rangmanch</span></div>
         </div>
       </div>
@@ -558,7 +586,7 @@
 
     <!-- ================= TEAM ================= -->
     <section class="team" id="team">
-      <div class="act-tag"><span>V</span><em>The Company</em></div>
+      <div class="act-tag"><span>V</span><em>The Team</em></div>
       <h2 class="section-title center">Meet the Team</h2>
       <p class="section-sub center">Organized by batch. Drag to browse on desktop, swipe on mobile.</p>
 
@@ -677,11 +705,12 @@
             <h4>Moudhvee Sruthi Leena</h4>
             <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
           </div>
-          <div class="member-card"><img src="images/2023%20in/rix_picc.jpg" alt="" loading="lazy"
+          <a href="https://rickyraj.vercel.app/" target="_blank" class="member-card">
+            <img src="images/2023%20in/rix_picc.jpg" alt="" loading="lazy"
               style="object-position: 50% 12%;">
             <h4>Ricky Raj illuri</h4>
-            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
-          </div>
+            <div class="member-social visible"><i class="ri-link"></i></div>
+          </a>
           <div class="member-card"><img src="images/2023%20in/manaswini.png" alt="" loading="lazy">
             <h4>B.Manaswini</h4>
             <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
@@ -744,10 +773,11 @@
             <h4>CH.Gagan Preetam Naidu</h4>
             <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
           </div>
-          <div class="member-card"><img src="images/2021%20in/dileep.jpg" alt="" loading="lazy">
+          <a href="https://www.instagram.com/d.ile.e.p?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="member-card">
+            <img src="images/2021%20in/dileep.jpg" alt="" loading="lazy">
             <h4>Dileep Sajja</h4>
-            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
-          </div>
+            <div class="member-social visible"><i class="ri-instagram-line"></i></div>
+          </a>
           <div class="member-card"><img src="images/2021%20in/dinesh.jpg" alt="" loading="lazy">
             <h4>Dinesh Chowdary</h4>
             <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
@@ -783,6 +813,22 @@
           </div>
           <div class="member-card"><img src="images/2020%20in/jithendra.jpeg" alt="" loading="lazy">
             <h4>Jitendra Gogineni</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2018–2022">
+        <div class="batch-head-row">
+          <h3>2018 – 2022</h3>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2018 in/achuth.png" alt="" loading="lazy">
+            <h4>Ganesh Achyuth</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2018 in/siri_chandana.png" alt="" loading="lazy">
+            <h4>Siri Chandana Reddy</h4>
             <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
           </div>
         </div>
@@ -880,6 +926,14 @@
         <img src="gallery/SaveClip.App_656829063_18380571232091106_3623819814796389415_n.jpg" alt="Gallery Image" loading="lazy">
         <img src="gallery/SaveClip.App_669742840_18390021196083497_1428391638334513366_n.jpg" alt="Gallery Image" loading="lazy">
         <img src="gallery/SaveClip.App_670888764_18579599260030474_962800893167326881_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/505377179_3139825212832779_9100365196866389634_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/505731774_3139825196166114_5167827313659540393_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/505987054_3139851886163445_5614025839759055070_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/506208224_3140280859453881_6893789374900364125_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/506759736_3140279982787302_3244903849524207513_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/506767144_3140279626120671_2886509503127125989_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/506851027_3139823936166240_2744332195334627251_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/inaug.jpg" alt="Gallery Image" loading="lazy">
       </div>
     </section>
 
@@ -952,8 +1006,8 @@
       </div>
 
       <div class="footer-meta">
-        <p>&copy; <span id="year"></span> Rangmanch, CVR College of Engineering. All rights reserved.</p>
-        <p class="footer-credit">Designed with <i class="ri-heart-fill"></i> by Rangmanch</p>
+        <p>Rangmanch, Since 2016</p>
+        <p class="footer-credit">Designed by Rangmanch</p>
       </div>
     </div>
   </footer>
@@ -962,7 +1016,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=9"></script>
+  <script src="performances-data.js"></script>
+  <script src="script.js?v=1119"></script>
 
   <!-- Join Modal -->
   <div class="join-modal-overlay" id="joinModalOverlay">
