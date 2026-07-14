@@ -19,7 +19,7 @@
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1117">
+  <link rel="stylesheet" href="styles.css?v=1118">
 </head>
 
 <body>
@@ -41,18 +41,20 @@
   <header class="site-header" id="siteHeader">
     <div class="header-inner">
       <a href="#hero" class="brand">
-        <span class="brand-mark">R</span>
+        <div class="brand-mark" style="overflow: hidden; padding: 0;">
+          <img src="logo.png" alt="Rangmanch Logo" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.25) translateY(-2px);">
+        </div>
         <span class="brand-word">RANGMANCH</span>
       </a>
       <nav class="main-nav" id="mainNav">
         <a href="#about" data-act="I">About</a>
         <!-- <a href="#legacy" data-act="II">Legacy</a> -->
-        <a href="#productions" data-act="II">Productions</a>
+        <a href="#productions" data-act="II">Performances</a>
         <a href="#awards" data-act="III">Awards</a>
         <a href="#mentor" data-act="IV">Mentor</a>
         <a href="#team" data-act="V">Company</a>
         <a href="#gallery" data-act="VI">Gallery</a>
-        <a href="#join" class="nav-cta">Join Us</a>
+        <a href="#" class="nav-cta join-trigger">Join Us</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -547,11 +549,8 @@
           <div class="act-tag"><span>IV</span><em>The Guiding Light</em></div>
           <h2 class="mentor-name">Dr. Jaya Verma</h2>
           <p class="mentor-role">Founder &amp; Mentor, Rangmanch &middot; Dept. of Humanities &amp; Sciences</p>
-          <blockquote class="mentor-quote">&ldquo;A student who has stood under a spotlight and forgotten their lines
-            will never again fear a viva, an interview, or a boardroom.&rdquo;</blockquote>
-          <p class="mentor-contribution">Under her mentorship since 2015, Rangmanch grew from a single annual skit to a
-            year-round repertory producing four full productions a year. She personally reads every script the club
-            stages and has sat through, by her own count, over 400 rehearsals.</p>
+
+          <p class="mentor-contribution">Under her mentorship since 2016, Rangmanch grew from a single annual performance to a year-round repertory participating and winning in multiple national competitions four every year.</p>
           <div class="mentor-years"><i class="ri-time-line"></i><span>10 years mentoring Rangmanch</span></div>
         </div>
       </div>
@@ -560,7 +559,7 @@
     <!-- ================= TEAM ================= -->
     <section class="team" id="team">
       <div class="act-tag"><span>V</span><em>The Company</em></div>
-      <h2 class="section-title center">Meet the Company</h2>
+      <h2 class="section-title center">Meet the Team</h2>
       <p class="section-sub center">Organized by batch. Drag to browse on desktop, swipe on mobile.</p>
 
       <div class="batch-block" data-batch="2014–2018">
@@ -598,13 +597,18 @@
             <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
                   class="ri-linkedin-fill"></i></a></div>
           </div>
+          <div class="member-card"><img src="images/founding/naveen_reddy.jpeg" alt="" loading="lazy">
+            <h4>B. Naveen Reddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
+                  class="ri-linkedin-fill"></i></a></div>
+          </div>
         </div>
       </div>
 
       <div class="batch-block" data-batch="2024–2028">
         <div class="batch-head-row">
           <h3>2024 – 2028</h3>
-          <span class="batch-tag">Third Year</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2024%20in/vasavi.jpg" alt="" loading="lazy">
@@ -657,7 +661,7 @@
       <div class="batch-block" data-batch="2023–2027">
         <div class="batch-head-row">
           <h3>2023 – 2027</h3>
-          <span class="batch-tag">Senior Company</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2023%20in/jatin.jpg" alt="" loading="lazy"
@@ -696,7 +700,7 @@
       <div class="batch-block" data-batch="2022–2026">
         <div class="batch-head-row">
           <h3>2022 – 2026</h3>
-          <span class="batch-tag">Executive Board</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2022%20in/varshith.jpg" alt="" loading="lazy">
@@ -729,7 +733,7 @@
       <div class="batch-block" data-batch="2021–2025">
         <div class="batch-head-row">
           <h3>2021 – 2025</h3>
-          <span class="batch-tag">Alumni</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2021%20in/bhuvii.jpg" alt="" loading="lazy">
@@ -770,7 +774,7 @@
       <div class="batch-block" data-batch="2020–2024">
         <div class="batch-head-row">
           <h3>2020 – 2024</h3>
-          <span class="batch-tag">Alumni</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2020%20in/koushik.jpeg" alt="" loading="lazy">
@@ -787,7 +791,7 @@
       <div class="batch-block" data-batch="2016–2020">
         <div class="batch-head-row">
           <h3>2016 – 2020</h3>
-          <span class="batch-tag">Alumni</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2016%20in/srivathsav.png" alt="" loading="lazy">
@@ -829,7 +833,7 @@
       <div class="batch-block" data-batch="2015–2019">
         <div class="batch-head-row">
           <h3>2015 – 2019</h3>
-          <span class="batch-tag">Alumni</span>
+
         </div>
         <div class="member-rail">
           <div class="member-card"><img src="images/2015%20in/amritha.png" alt="" loading="lazy">
@@ -900,7 +904,7 @@
           <h3>Why join Rangmanch?</h3>
           <ul>
             <li><i class="ri-check-line"></i>Perform on real stages, not just seminar halls</li>
-            <li><i class="ri-check-line"></i>Learn direction, writing, lighting, sound &amp; production design</li>
+
             <li><i class="ri-check-line"></i>Represent CVR at inter-college and state theatre festivals</li>
             <li><i class="ri-check-line"></i>Build the confidence that outlasts every stage</li>
           </ul>
@@ -915,7 +919,7 @@
       </div>
 
       <div class="join-cta-block">
-        <a href="mailto:rangmanchcvr@gmail.com" class="btn btn-solid btn-large">
+        <a href="#" class="btn btn-solid btn-large join-trigger">
           <span>Register for Auditions</span><i class="ri-arrow-right-up-line"></i>
         </a>
         <p class="join-contact"><i class="ri-map-pin-line"></i> CVR College of Engineering, Vastunagar, Hyderabad
@@ -925,13 +929,10 @@
 
     <!-- ================= SOCIAL ================= -->
     <section class="social" id="social">
-      <h2 class="section-title center">Follow the Show</h2>
+      <h2 class="section-title center">Follow The Club</h2>
       <div class="social-grid">
         <a href="https://www.instagram.com/rangmanch_cvr/" target="_blank" class="social-card"><i class="ri-instagram-line"></i><span>Instagram</span></a>
-        <a href="#" class="social-card"><i class="ri-youtube-line"></i><span>YouTube</span></a>
-        <a href="#" class="social-card"><i class="ri-linkedin-fill"></i><span>LinkedIn</span></a>
-        <a href="mailto:rangmanchcvr@gmail.com" class="social-card"><i class="ri-mail-line"></i><span>Email</span></a>
-        <a href="#" class="social-card"><i class="ri-global-line"></i><span>CVR College</span></a>
+        <a href="https://youtube.com/@rangmanchcvr?si=RIKYn1n0jkgeuAux" target="_blank" class="social-card"><i class="ri-youtube-line"></i><span>YouTube</span></a>
       </div>
     </section>
 
@@ -941,20 +942,15 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark">R</span>
+        <div class="brand-mark" style="overflow: hidden; padding: 0;">
+          <img src="logo.png" alt="Rangmanch Logo" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.25) translateY(-2px);">
+        </div>
         <div>
           <p class="footer-name">RANGMANCH</p>
           <p class="footer-tagline">Recognize an Actor in You.</p>
         </div>
       </div>
-      <nav class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#legacy">Legacy</a>
-        <a href="#productions">Productions</a>
-        <a href="#mentor">Mentor</a>
-        <a href="#team">Company</a>
-        <a href="#join">Join</a>
-      </nav>
+
       <div class="footer-meta">
         <p>&copy; <span id="year"></span> Rangmanch, CVR College of Engineering. All rights reserved.</p>
         <p class="footer-credit">Designed with <i class="ri-heart-fill"></i> by Rangmanch</p>
@@ -966,7 +962,19 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
+
+  <!-- Join Modal -->
+  <div class="join-modal-overlay" id="joinModalOverlay">
+    <div class="join-modal">
+      <button class="join-modal-close" id="joinModalClose">&times;</button>
+      <h3>We're Currently not Taking any members in</h3>
+      <p>Follow us to stay updated</p>
+      <a href="https://www.instagram.com/rangmanch_cvr/" target="_blank" class="join-modal-ig-btn">
+        <i class="ri-instagram-line"></i> Instagram
+      </a>
+    </div>
+  </div>
 </body>
 
 </html>

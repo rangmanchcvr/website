@@ -1605,9 +1605,10 @@ button {
 }
 
 .social-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   margin-top: 2.2rem;
 }
 
@@ -1615,8 +1616,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: .7rem;
   padding: 2rem 1rem;
+  width: 220px;
   border: 1px solid var(--line);
   border-radius: 6px;
   transition: border-color .35s ease, box-shadow .35s ease, transform .35s ease;
@@ -1643,11 +1646,7 @@ button {
   transform: scale(1.15);
 }
 
-@media (max-width: 860px) {
-  .social-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
 
 /* ============================================================
    FOOTER
@@ -1735,4 +1734,87 @@ button {
 [data-reveal] {
   opacity: 0;
   transform: translateY(24px);
+}
+
+/* ============================================================
+   Join Modal
+   ============================================================ */
+.join-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.join-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.join-modal {
+  background: var(--bg);
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.join-modal-overlay.active .join-modal {
+  transform: translateY(0);
+}
+
+.join-modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.join-modal-close:hover {
+  color: var(--gold);
+}
+
+.join-modal h3 {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.join-modal p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.join-modal-ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white !important;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.join-modal-ig-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
 }

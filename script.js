@@ -342,4 +342,29 @@ document.addEventListener('DOMContentLoaded', () => {
           scrollTrigger: { trigger: tag, start: 'top 88%' }
         });
       });
+      /* ---------------------------------------------------------
+         Join Modal Logic
+      --------------------------------------------------------- */
+      const joinTriggers = document.querySelectorAll('.join-trigger');
+      const joinModalOverlay = document.getElementById('joinModalOverlay');
+      const joinModalClose = document.getElementById('joinModalClose');
+
+      if (joinModalOverlay && joinTriggers.length > 0) {
+        joinTriggers.forEach(trigger => {
+          trigger.addEventListener('click', (e) => {
+            e.preventDefault(); // Prevent jump to top
+            joinModalOverlay.classList.add('active');
+          });
+        });
+
+        joinModalClose.addEventListener('click', () => {
+          joinModalOverlay.classList.remove('active');
+        });
+
+        joinModalOverlay.addEventListener('click', (e) => {
+          if (e.target === joinModalOverlay) {
+            joinModalOverlay.classList.remove('active');
+          }
+        });
+      }
     });
