@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RANGMANCH — Drama Club of CVR College of Engineering</title>
+  <meta name="description"
+    content="RANGMANCH is the official Drama Club of CVR College of Engineering. Recognize an Actor in You. Explore our productions, legacy, mentors and members.">
+  <meta name="theme-color" content="#0a0806">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=1117">
+</head>
+
+<body>
+
+  <!-- CURTAIN INTRO -->
+  <div class="curtain-intro" id="curtainIntro" aria-hidden="true">
+    <div class="curtain-panel curtain-left"></div>
+    <div class="curtain-panel curtain-right"></div>
+    <div class="curtain-mark">
+      <span class="curtain-mark-line">रंगमंच</span>
+      <span class="curtain-mark-sub">raising the curtain&hellip;</span>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR / SPOTLIGHT -->
+  <div class="spotlight-cursor" id="spotlightCursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#hero" class="brand">
+        <span class="brand-mark">R</span>
+        <span class="brand-word">RANGMANCH</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#about" data-act="I">About</a>
+        <!-- <a href="#legacy" data-act="II">Legacy</a> -->
+        <a href="#productions" data-act="II">Productions</a>
+        <a href="#awards" data-act="III">Awards</a>
+        <a href="#mentor" data-act="IV">Mentor</a>
+        <a href="#team" data-act="V">Company</a>
+        <a href="#gallery" data-act="VI">Gallery</a>
+        <a href="#join" class="nav-cta">Join Us</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img src="images/hero_section_bg.png" alt="Empty theatre stage bathed in dramatic red light" class="hero-img"
+          id="heroImg">
+        <div class="hero-vignette"></div>
+        <div class="hero-grain"></div>
+      </div>
+
+      <div class="spotlight-beam spotlight-beam-1"></div>
+      <div class="spotlight-beam spotlight-beam-2"></div>
+      <div class="dust-particles" id="dustParticles"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-reveal>the official drama club of cvr college of engineering</p>
+        <h1 class="hero-title" aria-label="RANGMANCH">
+          <span class="hero-title-line" data-title-line>R</span><span class="hero-title-line"
+            data-title-line>A</span><span class="hero-title-line" data-title-line>N</span><span class="hero-title-line"
+            data-title-line>G</span><span class="hero-title-line" data-title-line>M</span><span class="hero-title-line"
+            data-title-line>A</span><span class="hero-title-line" data-title-line>N</span><span class="hero-title-line"
+            data-title-line>C</span><span class="hero-title-line" data-title-line>H</span>
+        </h1>
+        <p class="hero-tagline" data-reveal>&ldquo;Recognize an Actor in You.&rdquo;</p>
+
+        <div class="hero-cta-row" data-reveal>
+          <a href="#about" class="btn btn-ghost">
+            <span>Explore Our Journey</span>
+          </a>
+          <a href="#join" class="btn btn-solid">
+            <span>Join Rangmanch</span>
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">scroll to begin the show</span>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+      <div class="act-tag"><span>I</span><em>Overture</em></div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <h2 class="section-title">A stage built<br>by engineers,<br><span class="italic-accent">owned by
+              artists.</span></h2>
+          <p class="about-lead">Rangmanch began as a shared dream among a handful of students and our faculty coordinator, united by the belief that every story deserved a stage. A decade later, it stands as one of the college's most celebrated and dynamic clubs, carrying forward a legacy of creativity, passion, and the spirit of theatre.</p>
+          <!--
+          <p class="about-body">We believe theatre has no prerequisite branch or CGPA. Rangmanch exists so that the shy
+            fresher who has never held a mic, and the senior who has bled for every blackout cue, find the same wing of
+            the same stage. We build scripts from scratch, argue over blocking till 2 a.m., and turn seminar halls into
+            black-box theatres one folding chair at a time.</p>
+          <div class="about-pillars">
+            <div class="pillar"><i class="ri-drama-line"></i><span>Theatre Culture</span></div>
+            <div class="pillar"><i class="ri-lightbulb-flash-line"></i><span>Creativity</span></div>
+            <div class="pillar"><i class="ri-team-line"></i><span>Leadership</span></div>
+            <div class="pillar"><i class="ri-hand-heart-line"></i><span>Teamwork</span></div>
+          </div>
+          -->
+          <a href="#productions" class="btn btn-solid" style="margin-top: 2rem;">
+            <span>View our Performances</span>
+            <i class="ri-arrow-right-down-line"></i>
+          </a>
+        </div>
+
+        <div class="about-visual">
+          <img src="gallery/SaveClip.App_622265132_18250291420289392_1930906370146498545_n.jpg"
+            alt="Actors rehearsing on a dim-lit stage" class="about-img-left" loading="lazy">
+          <img src="gallery/SaveClip.App_654969881_18361266469200338_1158635368658152933_n.jpg"
+            alt="Actors reading scripts" class="about-img-right" loading="lazy">
+        </div>
+      </div>
+
+      <div class="stats-strip" id="statsStrip">
+        <div class="stat" data-count="10"><span class="stat-num">0</span><span class="stat-suffix">+</span>
+          <p>Years Active</p>
+        </div>
+        <div class="stat" data-count="30"><span class="stat-num">0</span><span class="stat-suffix">+</span>
+          <p>Performances</p>
+        </div>
+        <div class="stat" data-count="10"><span class="stat-num">0</span><span class="stat-suffix">+</span>
+          <p>Awards</p>
+        </div>
+        <div class="stat" data-count="100"><span class="stat-num">0</span><span class="stat-suffix">+</span>
+          <p>Members</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LEGACY TIMELINE ================= 
+    <section class="legacy" id="legacy">
+      <div class="act-tag"><span>II</span><em>The Legacy Reel</em></div>
+      <h2 class="section-title center">Every year<br>added a new frame.</h2>
+      <p class="section-sub center">Drag the filmstrip, or tap a frame to open its story.</p>
+
+      <div class="reel-wrap">
+        <div class="reel-track" id="reelTrack">
+
+          <article class="frame" data-year="2013">
+            <div class="frame-visual"><img
+                src="https://images.unsplash.com/photo-1541447271487-09612b3f49f7?q=80&w=1974&auto=format&fit=crop"
+                alt="Founding production poster art" loading="lazy"></div>
+            <div class="frame-meta">
+              <span class="frame-year">2013</span>
+              <h3>The First Curtain</h3>
+              <p class="frame-event">Founders' Showcase &middot; CVR Auditorium</p>
+            </div>
+            <div class="frame-detail">
+              <p>Rangmanch is born from a 20-minute street play performed outside the canteen. No lights, no mics — just
+                seven students and a borrowed dhol.</p>
+              <ul class="frame-facts">
+                <li><strong>Production:</strong> Awaaz</li>
+                <li><strong>Awards:</strong> —</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="frame" data-year="2016">
+            <div class="frame-visual"><img
+                src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=1974&auto=format&fit=crop"
+                alt="Stage production photo" loading="lazy"></div>
+            <div class="frame-meta">
+              <span class="frame-year">2016</span>
+              <h3>First State Trophy</h3>
+              <p class="frame-event">Kalothsavam &middot; Osmania University</p>
+            </div>
+            <div class="frame-detail">
+              <p>Our adaptation of Andha Yug travels beyond campus for the first time and returns with Rangmanch's first
+                inter-university trophy.</p>
+              <ul class="frame-facts">
+                <li><strong>Production:</strong> Andha Yug</li>
+                <li><strong>Awards:</strong> Best Ensemble</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="frame" data-year="2018">
+            <div class="frame-visual"><img
+                src="https://images.unsplash.com/photo-1516307365426-bea591f05011?q=80&w=1974&auto=format&fit=crop"
+                alt="Backstage rehearsal photo" loading="lazy"></div>
+            <div class="frame-meta">
+              <span class="frame-year">2018</span>
+              <h3>The Black Box Opens</h3>
+              <p class="frame-event">Rangmanch Studio Launch &middot; CVR Seminar Hall</p>
+            </div>
+            <div class="frame-detail">
+              <p>A disused seminar hall is converted into CVR's first black-box studio, entirely rigged and painted by
+                members over one summer.</p>
+              <ul class="frame-facts">
+                <li><strong>Production:</strong> Kaagaz Ke Panne</li>
+                <li><strong>Awards:</strong> Best Set Design</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="frame" data-year="2020">
+            <div class="frame-visual"><img
+                src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1974&auto=format&fit=crop"
+                alt="Actor performing a monologue" loading="lazy"></div>
+            <div class="frame-meta">
+              <span class="frame-year">2020</span>
+              <h3>The Screen Curtain</h3>
+              <p class="frame-event">Rangmanch Digital &middot; Online</p>
+            </div>
+            <div class="frame-detail">
+              <p>Lockdown forces a first: an entirely virtual production, table-read over video calls and edited into a
+                40-minute digital play.</p>
+              <ul class="frame-facts">
+                <li><strong>Production:</strong> Six Feet Apart</li>
+                <li><strong>Awards:</strong> Best Original Script (Zonal)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="frame" data-year="2022">
+            <div class="frame-visual"><img
+                src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?q=80&w=1974&auto=format&fit=crop"
+                alt="Full cast on stage bow" loading="lazy"></div>
+            <div class="frame-meta">
+              <span class="frame-year">2022</span>
+              <h3>Back to the Boards</h3>
+              <p class="frame-event">Sailaab Theatre Fest &middot; JNTUH</p>
+            </div>
+            <div class="frame-detail">
+              <p>Rangmanch returns to live stages with Chakravyuh, a 45-member epic that becomes the largest cast the
+                club has ever fielded.</p>
+              <ul class="frame-facts">
+                <li><strong>Production:</strong> Chakravyuh</li>
+                <li><strong>Awards:</strong> Best Direction, Best Choreography</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="frame" data-year="2024">
+            <div class="frame-visual"><img
+                src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=1974&auto=format&fit=crop"
+                alt="Theatre audience watching a play" loading="lazy"></div>
+            <div class="frame-meta">
+              <span class="frame-year">2024</span>
+              <h3>A Decade, Onstage</h3>
+              <p class="frame-event">Rangmanch@10 &middot; CVR Open-Air Amphitheatre</p>
+            </div>
+            <div class="frame-detail">
+              <p>A retrospective evening restages scenes from ten years of productions in front of the largest audience
+                Rangmanch has drawn.</p>
+              <ul class="frame-facts">
+                <li><strong>Production:</strong> Ten Years, One Stage</li>
+                <li><strong>Awards:</strong> Best Anniversary Showcase, State Theatre Meet</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTIONS ================= -->
+    <section class="productions" id="productions">
+      <div class="act-tag"><span>II</span><em>On the Boards</em></div>
+      <h2 class="section-title">Our Performances</h2>
+
+      <div class="productions-grid" id="productionsGrid">
+        <article class="prod-card" data-modal="prod-7">
+          <div class="prod-card-media">
+            <img src="performances/cnc26_street1.JPG"
+              alt="AI Ke Saath Bhi, Ai Ke Badh Bhi poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>AI Ke Saath Bhi, Ai Ke Badh Bhi</h3>
+            <p class="prod-meta">Ciencia &middot; 2026</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-8">
+          <div class="prod-card-media">
+            <img src="performances/hlf1.jpeg"
+              alt="Chalo Duniya Sundar Banaye poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Chalo Duniya Sundar Banaye</h3>
+            <p class="prod-meta">Hyderabad Literary Fest &middot; 2026</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-17">
+          <div class="prod-card-media">
+            <img src="performances/mime.jpeg"
+              alt="The Invisible Wall poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Mime</span>
+            <h3>The Invisible Wall</h3>
+            <p class="prod-meta">CVR &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-9">
+          <div class="prod-card-media">
+            <img src="performances/nitb_perf.jpg"
+              alt="Chalo Duniya Sundar Banaye poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Chalo Duniya Sundar Banaye</h3>
+            <p class="prod-meta">NIT Bhopal &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-10">
+          <div class="prod-card-media">
+            <img src="performances/indep.jpeg"
+              alt="The Independence poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Stage Play</span>
+            <h3>The Independence</h3>
+            <p class="prod-meta">CVR &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-12">
+          <div class="prod-card-media">
+            <img src="performances/hybits.jpg"
+              alt="Aawaz Do poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Aawaz Do</h3>
+            <p class="prod-meta">BITS Hyd &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-11">
+          <div class="prod-card-media">
+            <img src="performances/vjit.jpg"
+              alt="Andher Nagari Chowpat Raja poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Stage Play</span>
+            <h3>Andher Nagari Chowpat Raja</h3>
+            <p class="prod-meta">VJIT &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-13">
+          <div class="prod-card-media">
+            <img src="performances/25hlf.jpg"
+              alt="Aawaz Do poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Aawaz Do</h3>
+            <p class="prod-meta">Hyderabad Literary Fest &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-14">
+          <div class="prod-card-media">
+            <img src="performances/iitm.jpg"
+              alt="Aawaz Do poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Aawaz Do</h3>
+            <p class="prod-meta">IIT Madras &middot; 2025</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-15">
+          <div class="prod-card-media">
+            <img src="performances/imth.jpg"
+              alt="Aawaz Do poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Aawaz Do</h3>
+            <p class="prod-meta">IMT Hyderabad &middot; 2024</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-16">
+          <div class="prod-card-media">
+            <img src="performances/cnc24.jpg"
+              alt="Aawaz Do poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Aawaz Do</h3>
+            <p class="prod-meta">Ciencia (CVR) &middot; 2024</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-new">
+          <div class="prod-card-media">
+            <img src="performances/imt24.jpeg"
+              alt="Koshish Karne Walo Ki Kabhi Haar Nahii Hoti" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Street Play</span>
+            <h3>Koshish Karne Walo Ki Kabhi Haar Nahii Hoti</h3>
+            <p class="prod-meta">IMT &middot; 2024</p>
+            <!-- <button class="btn-read-more">Read More</button> -->
+          </div>
+        </article>
+
+        <!--
+        <article class="prod-card" data-modal="prod-5">
+          <div class="prod-card-media">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1974&auto=format&fit=crop"
+              alt="Six Feet Apart production poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Digital Drama</span>
+            <h3>Six Feet Apart</h3>
+            <p class="prod-meta">Rangmanch Digital &middot; 2020</p>
+          </div>
+        </article>
+
+        <article class="prod-card" data-modal="prod-6">
+          <div class="prod-card-media">
+            <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1974&auto=format&fit=crop"
+              alt="Six Feet Apart production poster" loading="lazy">
+            <span class="prod-sweep"></span>
+          </div>
+          <div class="prod-card-body">
+            <span class="prod-genre">Digital Drama</span>
+            <h3>Six Feet Apart</h3>
+            <p class="prod-meta">Rangmanch Digital &middot; 2020</p>
+          </div>
+        </article>
+        -->
+
+
+
+      </div>
+    </section>
+
+    <!-- PRODUCTION MODALS (hidden data, rendered by JS into a shared lightbox) -->
+    <div class="prod-data" hidden>
+
+
+
+      <div id="prod-5" data-title="Six Feet Apart" data-genre="Digital Drama"
+        data-cast="Cast of 6 &middot; led by Meher Fatima" data-director="Directed by Priyanka Iyer"
+        data-event="Rangmanch Digital" data-year="2020" data-awards="Best Original Script (Zonal)"
+        data-desc="Six students isolated in six cities perform a play written entirely over video call — Rangmanch's first fully virtual production."
+        data-img1="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1974&auto=format&fit=crop"
+        data-img2="https://images.unsplash.com/photo-1580130379624-3a069adbffb3?q=80&w=2070&auto=format&fit=crop"></div>
+      <div id="prod-6" data-title="Six Feet Apart" data-genre="Digital Drama"
+        data-cast="Cast of 6 &middot; led by Meher Fatima" data-director="Directed by Priyanka Iyer"
+        data-event="Rangmanch Digital" data-year="2020" data-awards="Best Original Script (Zonal)"
+        data-desc="Six students isolated in six cities perform a play written entirely over video call — Rangmanch's first fully virtual production."
+        data-img1="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1974&auto=format&fit=crop"
+        data-img2="https://images.unsplash.com/photo-1580130379624-3a069adbffb3?q=80&w=2070&auto=format&fit=crop"></div>
+
+    </div>
+
+    <!-- ================= AWARDS ================= -->
+    <section class="awards" id="awards">
+      <div class="act-tag"><span>III</span><em>Standing Ovations</em></div>
+      <h2 class="section-title center">Awards & Achievements</h2>
+
+      <div class="awards-grid" id="awardsGrid">
+        <div class="award-card"><i class="ri-user-star-line"></i>
+          <h3>Best Actor Male (Jatin Gupta)</h3>
+          <p>BITS</p><span>2025</span><small>Aawaz Do</small>
+        </div>
+        <div class="award-card"><i class="ri-trophy-line"></i>
+          <h3>First Prize in Stage Play</h3>
+          <p>VJIT</p><span>2025</span><small>Andher Nagri Chowpat Raja</small>
+        </div>
+        <div class="award-card"><i class="ri-medal-line"></i>
+          <h3>Second Prize in Nukkad Natak</h3>
+          <p>IMT</p><span>2024</span><small>Aawaz Do</small>
+        </div>
+        <div class="award-card"><i class="ri-trophy-fill"></i>
+          <h3>First Prize in Nukkad Natak</h3>
+          <p>IMT</p><span>2023</span><small>Aawaz Do</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MENTOR ================= -->
+    <section class="mentor" id="mentor">
+      <div class="mentor-bg-type" aria-hidden="true">MENTOR&nbsp;MENTOR&nbsp;MENTOR&nbsp;MENTOR</div>
+      <div class="mentor-curtain-left"></div>
+      <div class="mentor-curtain-right"></div>
+
+      <div class="mentor-grid">
+        <div class="mentor-portrait" id="mentorPortrait">
+          <img src="images/jaya_ma.jpg" alt="Portrait of the faculty mentor of Rangmanch" loading="lazy">
+          <div class="mentor-portrait-glow"></div>
+        </div>
+        <div class="mentor-copy">
+          <div class="act-tag"><span>IV</span><em>The Guiding Light</em></div>
+          <h2 class="mentor-name">Dr. Jaya Verma</h2>
+          <p class="mentor-role">Founder &amp; Mentor, Rangmanch &middot; Dept. of Humanities &amp; Sciences</p>
+          <blockquote class="mentor-quote">&ldquo;A student who has stood under a spotlight and forgotten their lines
+            will never again fear a viva, an interview, or a boardroom.&rdquo;</blockquote>
+          <p class="mentor-contribution">Under her mentorship since 2015, Rangmanch grew from a single annual skit to a
+            year-round repertory producing four full productions a year. She personally reads every script the club
+            stages and has sat through, by her own count, over 400 rehearsals.</p>
+          <div class="mentor-years"><i class="ri-time-line"></i><span>10 years mentoring Rangmanch</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TEAM ================= -->
+    <section class="team" id="team">
+      <div class="act-tag"><span>V</span><em>The Company</em></div>
+      <h2 class="section-title center">Meet the Company</h2>
+      <p class="section-sub center">Organized by batch. Drag to browse on desktop, swipe on mobile.</p>
+
+      <div class="batch-block" data-batch="2014–2018">
+        <div class="batch-head-row">
+          <h3>2014 – 2018</h3>
+          <span class="batch-tag">The founding team</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/founding/ravichandra.jpg" alt="" loading="lazy">
+            <h4>Ravi Chandra</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
+                  class="ri-linkedin-fill"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/founding/harshavardhan.png" alt="" loading="lazy">
+            <h4>Harsha Vardhan</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
+                  class="ri-linkedin-fill"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/founding/yashwanth.png" alt="" loading="lazy"
+              style="object-position: top;">
+            <h4>Yashwanth Reddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
+                  class="ri-linkedin-fill"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/founding/ashish.jpg" alt="" loading="lazy">
+            <h4>Ashish Kannalwar</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
+                  class="ri-linkedin-fill"></i></a></div>
+          </div>
+          <div class="member-card">
+            <div style="overflow: hidden; aspect-ratio: 1;">
+              <img src="images/founding/shreya.jpeg" alt="" loading="lazy" class="zoom-shreya">
+            </div>
+            <h4>Shreya Patel</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a><a href="#"><i
+                  class="ri-linkedin-fill"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2024–2028">
+        <div class="batch-head-row">
+          <h3>2024 – 2028</h3>
+          <span class="batch-tag">Third Year</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2024%20in/vasavi.jpg" alt="" loading="lazy">
+            <h4>Vasavi</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/dheeraj.jpg" alt="" loading="lazy">
+            <h4>Dheeraj</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/nivas.jpg" alt="" loading="lazy">
+            <h4>CH.Nivas</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/bhanu.jpg" alt="" loading="lazy">
+            <h4>Bhanudheeraj</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/nissy.jpeg" alt="" loading="lazy">
+            <h4>Nissy Elijala</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/neha.jpg" alt="" loading="lazy">
+            <h4>Neha Gadala</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/chandrika.jpg" alt="" loading="lazy">
+            <h4>Chandrika Medikonduru</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/bruhathi.png" alt="" loading="lazy">
+            <h4>Bruhathi</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/yashwanth.jpg" alt="" loading="lazy">
+            <h4>Yashwanth Reddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/akhila.png" alt="" loading="lazy">
+            <h4>M.Akhila</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2024%20in/venkat.jpeg" alt="" loading="lazy">
+            <h4>Venkatesh</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2023–2027">
+        <div class="batch-head-row">
+          <h3>2023 – 2027</h3>
+          <span class="batch-tag">Senior Company</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2023%20in/jatin.jpg" alt="" loading="lazy"
+              style="object-position: 50% 12%;">
+            <h4>Jatin Gupta</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2023%20in/ruthuu.jpg" alt="" loading="lazy">
+            <h4>Ruthika Reddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2023%20in/moudhvee.jpg" alt="" loading="lazy">
+            <h4>Moudhvee Sruthi Leena</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2023%20in/rix_picc.jpg" alt="" loading="lazy"
+              style="object-position: 50% 12%;">
+            <h4>Ricky Raj illuri</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2023%20in/manaswini.png" alt="" loading="lazy">
+            <h4>B.Manaswini</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2023%20in/vaushnavi.png" alt="" loading="lazy">
+            <h4>A.Vaishnavi</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2023%20in/abhilashm.png" alt="" loading="lazy">
+            <h4>M.Abhilash</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2022–2026">
+        <div class="batch-head-row">
+          <h3>2022 – 2026</h3>
+          <span class="batch-tag">Executive Board</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2022%20in/varshith.jpg" alt="" loading="lazy">
+            <h4>Varshith Yadav</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2022%20in/shriya.jpg" alt="" loading="lazy">
+            <h4>M.Shriya </h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2022%20in/harshini.jpg" alt="" loading="lazy">
+            <h4>Harshini Thadoori</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2022%20in/rishika.jpg" alt="" loading="lazy">
+            <h4>B.Rishika</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2022%20in/sandhya.jpg" alt="" loading="lazy">
+            <h4>Sandhya</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2022%20in/yogeeshwar.png" alt="" loading="lazy">
+            <h4>Yogeeshwar Reddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2021–2025">
+        <div class="batch-head-row">
+          <h3>2021 – 2025</h3>
+          <span class="batch-tag">Alumni</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2021%20in/bhuvii.jpg" alt="" loading="lazy">
+            <h4>Bhuvanesh Kadari</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/gagan.jpg" alt="" loading="lazy">
+            <h4>CH.Gagan Preetam Naidu</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/dileep.jpg" alt="" loading="lazy">
+            <h4>Dileep Sajja</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/dinesh.jpg" alt="" loading="lazy">
+            <h4>Dinesh Chowdary</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/chandu.jpg" alt="" loading="lazy">
+            <h4>Chandrashekar Reddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/maniteja.jpg" alt="" loading="lazy">
+            <h4>Maniteja Meela</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/karthik.jpeg" alt="" loading="lazy">
+            <h4>Karthikeya Sharma</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2021%20in/sneha.jpg" alt="" loading="lazy">
+            <h4>Sneha Goppishetty </h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2020–2024">
+        <div class="batch-head-row">
+          <h3>2020 – 2024</h3>
+          <span class="batch-tag">Alumni</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2020%20in/koushik.jpeg" alt="" loading="lazy">
+            <h4>Narasimha Koushik</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2020%20in/jithendra.jpeg" alt="" loading="lazy">
+            <h4>Jitendra Gogineni</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2016–2020">
+        <div class="batch-head-row">
+          <h3>2016 – 2020</h3>
+          <span class="batch-tag">Alumni</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2016%20in/srivathsav.png" alt="" loading="lazy">
+            <h4>Srivatsava kanala</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/harshiini_p.jpg" alt="" loading="lazy">
+            <h4>Harshini Palkuri</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/laxmi_sravani.png" alt="" loading="lazy">
+            <h4>Laxmi sravani chitta</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/vasu.jpg" alt="" loading="lazy">
+            <h4>Vasu</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/ravi_teja.jpg" alt="" loading="lazy">
+            <h4>Ravi Teja</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/hari_prasad.jpg" alt="" loading="lazy">
+            <h4>Hari Prasad</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/swetha_gayathri.jpg" alt="" loading="lazy">
+            <h4>Swetha gayatri</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2016%20in/rajkumar.jpg" alt="" loading="lazy">
+            <h4>Rajkumar</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="batch-block" data-batch="2015–2019">
+        <div class="batch-head-row">
+          <h3>2015 – 2019</h3>
+          <span class="batch-tag">Alumni</span>
+        </div>
+        <div class="member-rail">
+          <div class="member-card"><img src="images/2015%20in/amritha.png" alt="" loading="lazy">
+            <h4>Amurtha pasumarthi</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2015%20in/jayadeep.jpg" alt="" loading="lazy">
+            <h4>Jayadeep tirunagari</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2015%20in/pooja_kapur.jpg" alt="" loading="lazy">
+            <h4>Pooja kapur</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2015%20in/masood.jpg" alt="" loading="lazy">
+            <h4>Masood</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+          <div class="member-card"><img src="images/2015%20in/varsha_p.jpg" alt="" loading="lazy">
+            <h4>Varsha Pabbathireddy</h4>
+            <div class="member-social"><a href="#"><i class="ri-instagram-line"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="gallery" id="gallery">
+      <div class="act-tag"><span>VI</span><em>Behind the Curtain</em></div>
+      <h2 class="section-title center">Gallery</h2>
+
+      <div class="masonry" id="masonryGrid">
+        <img src="gallery/SaveClip.App_622265132_18250291420289392_1930906370146498545_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_649887685_18315712111250506_7197983538196469616_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_650179213_18312309445254813_7402199421892392329_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_651019250_18316356259249089_3397718935862250158_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_652008875_18306585019279454_3773756337906173389_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_652813980_18313820008285419_8560990677009513302_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_654969881_18361266469200338_1158635368658152933_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_655128701_18383677699090258_533928581313185580_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_655265035_18387032929153871_8218269876958425402_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_655495875_18448389733107180_2832013941916949663_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_655677301_18347328736211703_3470695442311403292_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_656829063_18380571232091106_3623819814796389415_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_669742840_18390021196083497_1428391638334513366_n.jpg" alt="Gallery Image" loading="lazy">
+        <img src="gallery/SaveClip.App_670888764_18579599260030474_962800893167326881_n.jpg" alt="Gallery Image" loading="lazy">
+      </div>
+    </section>
+
+    <!-- LIGHTBOX (shared for gallery + productions) -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close"><i class="ri-close-line"></i></button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous"><i
+          class="ri-arrow-left-line"></i></button>
+      <div class="lightbox-inner" id="lightboxInner"></div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next"><i
+          class="ri-arrow-right-line"></i></button>
+    </div>
+
+    <!-- ================= JOIN ================= -->
+    <section class="join" id="join">
+      <div class="join-spotlight" id="joinSpotlight"></div>
+      <div class="act-tag light"><span>VII</span><em>Your Entrance</em></div>
+      <h2 class="join-title">Every great actor<br>was once in the audience.</h2>
+
+      <div class="join-grid">
+        <div class="join-why">
+          <h3>Why join Rangmanch?</h3>
+          <ul>
+            <li><i class="ri-check-line"></i>Perform on real stages, not just seminar halls</li>
+            <li><i class="ri-check-line"></i>Learn direction, writing, lighting, sound &amp; production design</li>
+            <li><i class="ri-check-line"></i>Represent CVR at inter-college and state theatre festivals</li>
+            <li><i class="ri-check-line"></i>Build the confidence that outlasts every stage</li>
+          </ul>
+        </div>
+        <div class="join-skills">
+          <h3>Skills you'll develop</h3>
+          <div class="skill-chips">
+            <span>Public Speaking</span><span>Improvisation</span><span>Script Writing</span>
+            <span>Team Leadership</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="join-cta-block">
+        <a href="mailto:rangmanchcvr@gmail.com" class="btn btn-solid btn-large">
+          <span>Register for Auditions</span><i class="ri-arrow-right-up-line"></i>
+        </a>
+        <p class="join-contact"><i class="ri-map-pin-line"></i> CVR College of Engineering, Vastunagar, Hyderabad
+          &nbsp;&middot;&nbsp; <i class="ri-mail-line"></i> rangmanchcvr@gmail.com</p>
+      </div>
+    </section>
+
+    <!-- ================= SOCIAL ================= -->
+    <section class="social" id="social">
+      <h2 class="section-title center">Follow the Show</h2>
+      <div class="social-grid">
+        <a href="https://www.instagram.com/rangmanch_cvr/" target="_blank" class="social-card"><i class="ri-instagram-line"></i><span>Instagram</span></a>
+        <a href="#" class="social-card"><i class="ri-youtube-line"></i><span>YouTube</span></a>
+        <a href="#" class="social-card"><i class="ri-linkedin-fill"></i><span>LinkedIn</span></a>
+        <a href="mailto:rangmanchcvr@gmail.com" class="social-card"><i class="ri-mail-line"></i><span>Email</span></a>
+        <a href="#" class="social-card"><i class="ri-global-line"></i><span>CVR College</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">R</span>
+        <div>
+          <p class="footer-name">RANGMANCH</p>
+          <p class="footer-tagline">Recognize an Actor in You.</p>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#legacy">Legacy</a>
+        <a href="#productions">Productions</a>
+        <a href="#mentor">Mentor</a>
+        <a href="#team">Company</a>
+        <a href="#join">Join</a>
+      </nav>
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Rangmanch, CVR College of Engineering. All rights reserved.</p>
+        <p class="footer-credit">Designed with <i class="ri-heart-fill"></i> by Rangmanch</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js?v=8"></script>
+</body>
+
+</html>
