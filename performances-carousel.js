@@ -145,7 +145,7 @@
     // Bounded navigation
     if (index < 0) index = 0;
     if (index >= total) index = total - 1;
-    
+
     if (index === activeIndex) return;
 
     isAnimating = true;
