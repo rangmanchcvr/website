@@ -24,6 +24,16 @@
 
 <body style="cursor: auto;">
 
+  <!-- CURTAIN INTRO -->
+  <div class="curtain-intro" id="curtainIntro" aria-hidden="true">
+    <div class="curtain-panel curtain-left"></div>
+    <div class="curtain-panel curtain-right"></div>
+    <div class="curtain-mark">
+      <span class="curtain-mark-line">रंगमंच</span>
+      <span class="curtain-mark-sub">raising the curtain&hellip;</span>
+    </div>
+  </div>
+
   <div class="carousel-page">
 
     <!-- Header -->
@@ -74,6 +84,21 @@
   </div>
 
   <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const curtain = document.getElementById('curtainIntro');
+      if (curtain && window.gsap) {
+        const tlIntro = gsap.timeline({ delay: .2 });
+        tlIntro
+          .to('.curtain-mark', { opacity: 1, duration: .5 })
+          .to('.curtain-mark', { opacity: 0, duration: .4, delay: .6 })
+          .to('.curtain-left', { xPercent: -100, duration: 1.1, ease: 'power3.inOut' }, '-=.1')
+          .to('.curtain-right', { xPercent: 100, duration: 1.1, ease: 'power3.inOut' }, '<')
+          .set(curtain, { display: 'none' });
+      }
+    });
+  </script>
   <script src="performances-data.js"></script>
   <script src="performances-carousel.js"></script>
 
