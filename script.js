@@ -391,4 +391,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  /* ---------------------------------------------------------
+     Audition Rollout Logic
+  --------------------------------------------------------- */
+  const auditionBtn = document.getElementById('auditionBtn');
+  const auditionRollout = document.getElementById('auditionRollout');
+  if (auditionBtn && auditionRollout) {
+    auditionBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      auditionRollout.classList.toggle('active');
+      const icon = auditionBtn.querySelector('i');
+      if (icon) {
+        if (auditionRollout.classList.contains('active')) {
+          icon.classList.remove('ri-arrow-down-s-line');
+          icon.classList.add('ri-arrow-up-s-line');
+        } else {
+          icon.classList.remove('ri-arrow-up-s-line');
+          icon.classList.add('ri-arrow-down-s-line');
+        }
+      }
+    });
+  }
 });

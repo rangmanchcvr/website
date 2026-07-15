@@ -2162,3 +2162,47 @@ a.member-card {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
 }
+
+.audition-rollout {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+  background: var(--velvet-panel-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.audition-rollout.active {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+}
+
+.audition-rollout p {
+  color: var(--ivory-dim);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-sans);
+}
+
+.insta-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insta-follow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+}
