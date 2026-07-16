@@ -19,10 +19,10 @@
   <!-- Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=1119">
+  <link rel="stylesheet" href="styles.css?v=1128">
 </head>
 
-<body style="cursor: auto;">
+<body style="cursor: default;">
 
   <!-- CURTAIN INTRO -->
   <div class="curtain-intro" id="curtainIntro" aria-hidden="true">
@@ -37,19 +37,29 @@
   <div class="carousel-page">
 
     <!-- Header -->
-    <div class="carousel-page-header">
-      <a href="index.html#productions" class="carousel-back">
-        <i class="ri-arrow-left-line"></i>
-        <span>Back to Home</span>
-      </a>
-      <a href="index.html" class="brand">
-        <div class="brand-mark" style="overflow: hidden; padding: 0;">
-          <img src="logo.png" alt="Rangmanch Logo"
-            style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.25) translateY(-2px);">
-        </div>
-        <span class="brand-word">RANGMANCH</span>
-      </a>
-    </div>
+    <header class="site-header" id="siteHeader" style="position: absolute; top: 0; left: 0; width: 100%; z-index: 1000; background: transparent;">
+      <div class="header-inner">
+        <a href="index.html#hero" class="brand">
+          <div class="brand-mark" style="overflow: hidden; padding: 0;">
+            <img src="logo.png" alt="Rangmanch Logo"
+              style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.25) translateY(-2px);">
+          </div>
+          <span class="brand-word">RANGMANCH</span>
+        </a>
+        <nav class="main-nav" id="mainNav">
+          <a href="index.html#about" data-act="I">About</a>
+          <a href="index.html#productions" data-act="II">Performances</a>
+          <a href="index.html#awards" data-act="III">Awards</a>
+          <a href="index.html#mentor" data-act="IV">Mentor</a>
+          <a href="index.html#team" data-act="V">Company</a>
+          <a href="index.html#gallery" data-act="VI">Gallery</a>
+          <a href="index.html#" class="nav-cta join-trigger">Join Us</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
     <!-- Title -->
     <h1 class="carousel-page-title">Our Performances</h1>
@@ -100,8 +110,22 @@
     });
   </script>
   <script src="performances-data.js"></script>
-  <script src="performances-carousel.js"></script>
+  <script src="performances-carousel.js?v=6"></script>
 
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen);
+      });
+      mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }));
+    }
+  </script>
 </body>
 
 </html>

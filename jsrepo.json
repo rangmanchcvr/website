@@ -1,0 +1,7 @@
+{
+  "paths": {
+    "components": "./components",
+    "component": "./components",
+    "ui": "./components/ui"
+  }
+}

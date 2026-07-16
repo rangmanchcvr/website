@@ -12,7 +12,7 @@
   if (!track || typeof PERFORMANCES === 'undefined') return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const data = PERFORMANCES;
+  const data = typeof window.CAROUSEL_LIMIT !== 'undefined' ? PERFORMANCES.slice(0, window.CAROUSEL_LIMIT) : PERFORMANCES;
   const total = data.length;
   let activeIndex = 0;
   let isAnimating = false;
@@ -172,7 +172,14 @@
     const card = e.target.closest('.carousel-card');
     if (card) {
       const idx = parseInt(card.dataset.index, 10);
-      if (idx !== activeIndex) goTo(idx);
+      if (idx !== activeIndex) {
+        goTo(idx);
+      } else {
+        // It's the active card, open lightbox!
+        if (typeof window.openLightboxForPerf !== 'undefined') {
+          window.openLightboxForPerf(data[idx].id);
+        }
+      }
     }
   });
 

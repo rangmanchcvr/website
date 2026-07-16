@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let lenis;
   if (!reduceMotion && window.Lenis) {
     lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    window.lenis = lenis; // Expose globally for specular button
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -40,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function heroIntro() {
     const tl = gsap.timeline();
-    tl.from('[data-title-line]', {
-      yPercent: 130, duration: 1, ease: 'power4.out', stagger: .045
+    tl.call(() => {
+      if (window.startRangmanchAnimation) window.startRangmanchAnimation();
     })
       .to('[data-reveal]', {
         opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: .15
@@ -51,20 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------------------------------
-     Custom cursor / spotlight
+     Custom cursor / spotlight (Removed)
   --------------------------------------------------------- */
-  const cursor = document.getElementById('spotlightCursor');
-  if (window.matchMedia('(min-width: 861px)').matches) {
-    window.addEventListener('mousemove', (e) => {
-      gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: .35, ease: 'power2.out' });
-    });
-    document.querySelectorAll('a, button, .prod-card, .member-card, .frame, .masonry img').forEach(el => {
-      el.addEventListener('mouseenter', () => gsap.to(cursor, { width: 54, height: 54, background: 'rgba(212,175,106,.25)', duration: .25 }));
-      el.addEventListener('mouseleave', () => gsap.to(cursor, { width: 26, height: 26, background: 'transparent', duration: .25 }));
-    });
-  } else {
-    cursor.style.display = 'none';
-  }
 
   /* ---------------------------------------------------------
      Dust particles (hero)
@@ -170,36 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------------------------------------------------
-     Productions grid reveal + modal (shared lightbox)
+     Productions 3D Cylinder Carousel
   --------------------------------------------------------- */
-  gsap.from('.prod-card', {
-    opacity: 0, y: 50, duration: .8, ease: 'power2.out',
-    scrollTrigger: { trigger: '.productions-grid', start: 'top 80%' }
-  });
-
-  /* ---------------------------------------------------------
-     Productions grid: cap to 2 rows
-  --------------------------------------------------------- */
-  function capProductionsGrid() {
-    const grid = document.getElementById('productionsGrid');
-    const viewMoreBtn = document.getElementById('prodViewMore');
-    if (!grid) return;
-    const cards = Array.from(grid.querySelectorAll('.prod-card'));
-    const w = window.innerWidth;
-    let perRow = 4;
-    if (w <= 620) perRow = 1;
-    else if (w <= 980) perRow = 2;
-    const maxVisible = perRow * 2;
-    cards.forEach((card, i) => {
-      card.style.display = i < maxVisible ? '' : 'none';
-    });
-    if (viewMoreBtn) {
-      viewMoreBtn.closest('.prod-view-more-wrap').style.display =
-        cards.length > maxVisible ? 'flex' : 'none';
-    }
-  }
-  capProductionsGrid();
-  window.addEventListener('resize', capProductionsGrid);
 
   const lightbox = document.getElementById('lightbox');
   const lightboxInner = document.getElementById('lightboxInner');
@@ -244,14 +205,31 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxInner.innerHTML = `<img class="lb-gallery-img" src="${src}" alt="${alt}">`;
   }
 
-  /* document.querySelectorAll('.prod-card').forEach(card => {
-    card.addEventListener('click', () => {
-      lbMode = 'prod';
-      lbIndex = prodIds.indexOf(card.dataset.modal);
-      renderProd(prodIds[lbIndex]);
-      openLightbox();
-    });
-  }); */
+  // Attach lightbox events dynamically since cards are rendered via JS
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.prod-card');
+    if (card && card.dataset.modal) {
+      window.openLightboxForPerf(card.dataset.modal);
+    }
+  });
+
+  window.openLightboxForPerf = function(id) {
+    lbMode = 'prod';
+    const perf = PERFORMANCES.find(p => p.id === id);
+    if (perf) {
+        lightboxInner.innerHTML = `
+          <div class="lb-prod">
+            <img src="${perf.img}" alt="${perf.alt}">
+            <div class="lb-prod-info">
+              <h2>${perf.title}</h2>
+              <p>${perf.genre} &middot; ${perf.meta}</p>
+            </div>
+          </div>
+        `;
+        openLightbox();
+      }
+  };
+
   galleryImgs.forEach((img, i) => {
     img.addEventListener('click', () => {
       lbMode = 'gallery';
@@ -388,6 +366,58 @@ document.addEventListener('DOMContentLoaded', () => {
     joinModalOverlay.addEventListener('click', (e) => {
       if (e.target === joinModalOverlay) {
         joinModalOverlay.classList.remove('active');
+      }
+    });
+  }
+
+  /* ---------------------------------------------------------
+     Tilted Card Effect for Mentor Portrait
+  --------------------------------------------------------- */
+  const tiltedFigure = document.querySelector('.tilted-card-figure');
+  const tiltedInner = document.querySelector('.tilted-card-inner');
+  const tiltedCaption = document.querySelector('.tilted-card-caption');
+
+  if (tiltedFigure && tiltedInner) {
+    tiltedFigure.addEventListener('mousemove', (e) => {
+      const rect = tiltedFigure.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const rotateX = ((y / rect.height) - 0.5) * -20;
+      const rotateY = ((x / rect.width) - 0.5) * 20;
+
+      gsap.to(tiltedInner, { 
+        rotateX: rotateX, 
+        rotateY: rotateY, 
+        duration: 0.3, 
+        ease: 'power2.out' 
+      });
+
+      if (tiltedCaption) {
+        gsap.to(tiltedCaption, {
+          x: x,
+          y: y,
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      }
+    });
+
+    tiltedFigure.addEventListener('mouseleave', () => {
+      gsap.to(tiltedInner, { 
+        rotateX: 0, 
+        rotateY: 0, 
+        duration: 0.5, 
+        ease: 'power2.out' 
+      });
+
+      if (tiltedCaption) {
+        gsap.to(tiltedCaption, {
+          opacity: 0,
+          duration: 0.5,
+          ease: 'power2.out'
+        });
       }
     });
   }

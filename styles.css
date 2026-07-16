@@ -40,12 +40,12 @@ body {
   color: var(--ivory);
   font-family: var(--font-sans);
   overflow-x: hidden;
-  cursor: none;
+  cursor: default;
 }
 
 @media (max-width: 860px) {
   body {
-    cursor: auto;
+    cursor: default;
   }
 }
 
@@ -83,33 +83,7 @@ button {
   }
 }
 
-/* ============================================================
-   Custom cursor / spotlight
-   ============================================================ */
-.spotlight-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 1px solid var(--gold-soft);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: width .25s var(--ease-theatre), height .25s var(--ease-theatre), background .25s;
-}
-
-@media (max-width: 860px) {
-  .spotlight-cursor {
-    display: none;
-  }
-}
-
-/* ============================================================
-   Curtain intro
-   ============================================================ */
+/* ---Curtain intro--- */
 .curtain-intro {
   position: fixed;
   inset: 0;
@@ -213,6 +187,7 @@ button {
   font-family: var(--font-display);
   letter-spacing: .12em;
   font-size: 1.15rem;
+  color: #ffffff;
 }
 
 .main-nav {
@@ -579,6 +554,20 @@ button {
   box-shadow: 0 12px 30px rgba(212, 175, 106, .25);
 }
 
+.btn-overture {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-overture:hover {
+  background: #E53935;
+  border-color: #E53935;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(229, 57, 53, 0.4);
+}
+
 .btn-large {
   padding: 1.2rem 2.2rem;
   font-size: .95rem;
@@ -897,6 +886,36 @@ button {
   margin-top: 2.5rem;
 }
 
+/* 3D Cylinder Carousel */
+.cylinder-viewport {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  perspective: 1400px;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.cylinder-container {
+  width: 180px; 
+  height: 270px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.cylinder-container .prod-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  margin: 0;
+}
+
 .prod-card {
   position: relative;
   border-radius: 4px;
@@ -917,6 +936,7 @@ button {
 .prod-card-media {
   position: relative;
   aspect-ratio: 16/9;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -954,6 +974,10 @@ button {
   font-weight: 400;
   font-size: 1.5rem;
   margin: .4rem 0 .3rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .prod-meta {
@@ -988,11 +1012,28 @@ button {
   .productions-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .cylinder-container {
+    width: 160px;
+    height: 240px;
+  }
+  .carousel-card {
+    width: 280px;
+  }
 }
 
 @media (max-width: 620px) {
   .productions-grid {
     grid-template-columns: 1fr;
+  }
+  .cylinder-viewport {
+    height: 350px;
+  }
+  .cylinder-container {
+    width: 140px;
+    height: 210px;
+  }
+  .carousel-card {
+    width: 240px;
   }
 }
 
@@ -1081,7 +1122,7 @@ button {
   text-transform: uppercase;
   letter-spacing: .02em;
   text-align: center;
-  margin: 0 0 .4rem;
+  margin: 90px 0 .4rem;
   padding: 0 clamp(1.2rem, 4vw, 3rem);
 }
 
@@ -1134,6 +1175,8 @@ button {
   top: 50%;
   left: 50%;
   width: 320px;
+  display: flex;
+  flex-direction: column;
   background: var(--velvet-panel-2);
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -1159,6 +1202,7 @@ button {
 
 .carousel-card-media {
   aspect-ratio: 16/9;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -1170,6 +1214,9 @@ button {
 
 .carousel-card-body {
   padding: 1.1rem 1.2rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .carousel-card-body .prod-genre {
@@ -1182,6 +1229,10 @@ button {
   font-size: 1.25rem;
   margin: .35rem 0 .25rem;
   color: var(--ivory);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .carousel-card-body .prod-meta {
@@ -1271,12 +1322,9 @@ button {
     min-height: 380px;
   }
 
-  .carousel-card {
-    width: 260px;
-  }
-
   .carousel-arrow {
     position: static;
+    padding: 10px;
     transform: none;
     width: 42px;
     height: 42px;
@@ -1320,6 +1368,8 @@ button {
       border-color 100ms ease;
   }
 }
+
+
 
 /* ============================================================
    Lightbox (shared: productions modal + gallery)
@@ -1601,8 +1651,7 @@ button {
 .mentor-portrait {
   position: relative;
   aspect-ratio: 4/5;
-  border-radius: 6px;
-  overflow: hidden;
+  border-radius: 10px;
   will-change: transform;
 }
 
@@ -1616,7 +1665,8 @@ button {
   position: absolute;
   inset: 0;
   box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-  border: 1px solid rgba(212, 175, 106, .3);
+  border: none;
+  border-radius: 10px;
 }
 
 .mentor-name {
@@ -1786,13 +1836,15 @@ a.member-card {
   cursor: pointer;
 }
 
-.member-social a, .member-social i {
+.member-social a,
+.member-social i {
   font-size: 1rem;
   color: var(--ivory-dim);
   transition: color .3s ease;
 }
 
-.member-social a:hover, a.member-card:hover .member-social i {
+.member-social a:hover,
+a.member-card:hover .member-social i {
   color: var(--gold);
 }
 
@@ -2206,4 +2258,80 @@ a.member-card {
 .insta-follow-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+}
+
+/* ============================================================
+   Tilted Card Effect (Mentor Portrait)
+   ============================================================ */
+.tilted-card-figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tilted-card-mobile-alert {
+  position: absolute;
+  top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .tilted-card-mobile-alert {
+    display: block;
+  }
+
+  .tilted-card-caption {
+    display: none;
+  }
+}
+
+.tilted-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.tilted-card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  will-change: transform;
+  transform: translateZ(30px);
+}
+
+.tilted-card-caption {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: #2d2d2d;
+  opacity: 0;
+  z-index: 3;
 }
