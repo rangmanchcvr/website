@@ -1776,6 +1776,8 @@ button {
   border-radius: 6px;
   overflow: hidden;
   transition: transform .35s var(--ease-theatre), border-color .35s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .member-card:hover {
@@ -1819,31 +1821,50 @@ button {
 
 .member-social {
   display: flex;
-  gap: .6rem;
-  padding: 0 1rem 1rem;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem;
+  margin-top: auto;
   visibility: hidden;
   pointer-events: none;
 }
 
 .member-social.visible {
   visibility: visible;
+  pointer-events: auto;
 }
 
 a.member-card {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
 }
 
-.member-social a,
+.member-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+  border: 1px solid var(--ivory-dim);
+  border-radius: 50%;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
 .member-social i {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--ivory-dim);
   transition: color .3s ease;
 }
 
-.member-social a:hover,
+.member-social a:hover {
+  transform: scale(1.1);
+  border-color: var(--gold);
+}
+
+.member-social a:hover i,
 a.member-card:hover .member-social i {
   color: var(--gold);
 }

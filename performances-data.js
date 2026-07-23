@@ -44,6 +44,7 @@ const PERFORMANCES = [
     meta: 'NIT Bhopal \u00b7 2025'
   },
   {
+
     id: 'prod-10',
     img: 'performances/indep.jpeg',
     alt: 'The Independence poster',
