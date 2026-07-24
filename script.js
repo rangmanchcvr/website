@@ -60,12 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
   --------------------------------------------------------- */
   const dustWrap = document.getElementById('dustParticles');
   if (dustWrap && !reduceMotion) {
-    for (let i = 0; i < 26; i++) {
+    for (let i = 0; i < 36; i++) {
       const p = document.createElement('span');
       const left = Math.random() * 100;
-      const delay = Math.random() * 10;
-      const dur = 8 + Math.random() * 10;
+      const delay = Math.random() * 12;
+      const dur = 10 + Math.random() * 14;
+      const size = (1 + Math.random() * 2.2).toFixed(1);
+      const opacity = (0.15 + Math.random() * 0.35).toFixed(2);
       p.style.left = left + '%';
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.opacity = opacity;
       p.style.animationDelay = delay + 's';
       p.style.animationDuration = dur + 's';
       dustWrap.appendChild(p);

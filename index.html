@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=EB+Garamond:ital,wght@0,400;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
     rel="stylesheet">
 
   <!-- Icons -->
@@ -85,17 +85,21 @@
         <img src="images/hero_bg.png" alt="Empty theatre stage bathed in dramatic red light" class="hero-img"
           id="heroImg">
         <div class="hero-vignette"></div>
+        <div class="hero-actor-spotlight"></div>
+        <div class="hero-haze"></div>
+        <div class="stage-floor-reflection"></div>
         <div class="hero-grain"></div>
       </div>
 
       <div class="spotlight-beam spotlight-beam-1"></div>
       <div class="spotlight-beam spotlight-beam-2"></div>
+      <div class="spotlight-beam spotlight-beam-3"></div>
       <div class="dust-particles" id="dustParticles"></div>
 
       <div class="hero-content">
         <p class="hero-eyebrow" data-reveal>the official theatre club of cvr college of engineering</p>
         <h1 class="hero-title" aria-label="RANGMANCH">
-          <div class="docs-demo-html" style="width: 100%; max-width: 800px; margin: 0 auto; opacity: 0;"
+          <div class="docs-demo-html" style="width: 100%; max-width: 745px; margin: 0 0 1.5rem 0; opacity: 0;"
             id="rangmanchSvgWrap">
             <svg viewBox="0 0 455 144" class="rangmanch-svg" style="width: 100%; height: auto;">
               <g stroke="currentColor" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -108,12 +112,12 @@
         <p class="hero-tagline" data-reveal>&ldquo;Recognize an Actor in You.&rdquo;</p>
 
         <div class="hero-cta-row" data-reveal>
-          <a href="#about" class="btn btn-ghost">
-            <span>Explore Our Journey</span>
-          </a>
           <a href="#" class="btn btn-solid join-trigger">
             <span>Join Rangmanch</span>
             <i class="ri-arrow-right-up-line"></i>
+          </a>
+          <a href="#about" class="btn btn-ghost">
+            <span>Explore Our Journey</span>
           </a>
         </div>
       </div>
@@ -993,17 +997,18 @@
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="performances-data.js"></script>
   <script type="module">
-    // Set RANGMANCH color for the strokes
-    document.querySelector('.rangmanch-svg').style.color = '#E53935';
+    // Set RANGMANCH color for the strokes while animating
+    document.querySelector('.rangmanch-svg').style.color = '#F5EFE6';
 
     function flickerAndFill() {
       import('https://esm.sh/animejs@3.2.1').then(animeModule => {
         const anime = animeModule.default;
 
-        // Fill with color
+        // Fill text with color
         anime({
           targets: '.line',
-          fill: '#E53935',
+          fill: '#F5EFE6',
+          stroke: '#F5EFE6',
           duration: 700,
           delay: 0,
           easing: 'easeInQuad'
