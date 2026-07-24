@@ -421,4 +421,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  /* ---------------------------------------------------------
+     Team Batch Scroll Arrows
+  --------------------------------------------------------- */
+  document.querySelectorAll('.batch-block').forEach(block => {
+    const rail = block.querySelector('.member-rail');
+    const btnLeft = block.querySelector('.btn-left');
+    const btnRight = block.querySelector('.btn-right');
+    
+    if (rail && btnLeft && btnRight) {
+      const getScrollAmount = () => {
+        const cards = rail.querySelectorAll('.member-card');
+        if (cards.length > 0) {
+          const cardWidth = cards[0].offsetWidth;
+          const gap = parseFloat(window.getComputedStyle(rail).gap) || 20.8;
+          const multiplier = window.innerWidth < 768 ? 1 : 2;
+          return (cardWidth + gap) * multiplier;
+        }
+        return window.innerWidth < 768 ? 210 : 420;
+      };
+
+      // Event listeners are handled via inline onclick attributes in index.html to guarantee functionality.
+    }
+  });
+
 });
+

@@ -1741,6 +1741,32 @@ button {
   margin: 0;
 }
 
+.batch-scroll-arrows {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto; /* pushes it to the right */
+}
+
+.batch-scroll-arrows button {
+  background: var(--velvet-panel-2);
+  border: 1px solid var(--line);
+  color: var(--ivory);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.batch-scroll-arrows button:hover {
+  background: var(--gold);
+  color: var(--bg-color);
+  border-color: var(--gold);
+}
+
 .batch-tag {
   font-size: .72rem;
   letter-spacing: .15em;
@@ -1758,6 +1784,7 @@ button {
   cursor: grab;
   padding-bottom: .6rem;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .member-rail::-webkit-scrollbar {
