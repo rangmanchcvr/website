@@ -4,6 +4,14 @@
    ============================================================ */
 const PERFORMANCES = [
   {
+    id: 'prod-19',
+    img: 'performances/ind_2026.JPG',
+    alt: 'Aadharsha Bharatham poster',
+    genre: 'Street Play',
+    title: 'AADHARSHA BHARATHAM',
+    meta: 'CVR \u00b7 2026'
+  },
+  {
     id: 'prod-7',
     img: 'performances/cnc26_street1.JPG',
     alt: 'AI Ke Saath Bhi, Ai Ke Badh Bhi poster',
@@ -38,9 +46,9 @@ const PERFORMANCES = [
   {
     id: 'prod-9',
     img: 'performances/nitb_perf.jpg',
-    alt: 'Chalo Duniya Sundar Banaye poster',
+    alt: 'Aawaz Do poster',
     genre: 'Street Play',
-    title: 'Chalo Duniya Sundar Banaye',
+    title: 'Aawaz Do',
     meta: 'NIT Bhopal \u00b7 2025'
   },
   {
